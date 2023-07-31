@@ -1,0 +1,177 @@
+/* 1. Write a function to get the lowest, highest and average value in the array (with and without sort function).
+*/
+console.log("1. Write a function to get the lowest, highest and average value in the array (with and without sort function)")
+console.log("\ ")
+console.log(" a. Using the sort function")
+function getNumbersWSort(arr) {
+    if (arr.length === 0) {
+        return {
+        lowest: undefined,
+        highest: undefined,
+        average: undefined,
+        };
+    }
+    const sortedArr = arr.slice().sort((a, b) => a - b);
+    const lowest = sortedArr[0];
+    const highest = sortedArr[sortedArr.length - 1];
+    const sum = sortedArr.reduce((acc, val) => acc + val, 0);
+    const average = sum / sortedArr.length;
+    return {
+    lowest,
+    highest,
+    average,
+    };
+}
+const arr = [3, 10, 2, 8, 5, 1, 7, 6, 4]; // lowest:1, highest:10, average:5.11
+const result = getNumbersWSort(arr);
+console.log(result)
+console.log("\ ")
+
+console.log(" b. Without the sort function")
+function getNumbersNoSort(arr1) {
+    if (arr1.length === 0) {
+        return {
+        lowest: undefined,
+        highest: undefined,
+        average: undefined,
+        };
+    }
+    let lowest = arr1[0];
+    let highest = arr1[0];
+    let sum1 = 0;
+
+    for (const num of arr1) {
+        if (num < lowest) {
+        lowest = num;
+        }
+        if (num > highest) {
+        highest = num;
+        }
+        sum1 += num;
+    }
+    const average = sum1 / arr1.length;
+    return {
+    lowest,
+    highest,
+    average,
+};
+}
+const arr1 = [3, 15, 9, 8, 5, 3, 7, 6, 4]; // lowest:3, highest:15, average:6.66
+const result1 = getNumbersNoSort(arr1);
+console.log(result1)
+console.log("\ ")
+
+/* 2. Write a function that takes an array of words and returns a string by concatenating the words in the array, separated by commas and - the last word - by an 'and'.
+*/
+console.log("2. Write a function that takes an array of words and returns a string by concatenating the words in the array, separated by commas and - the last word - by an 'and'.")
+console.log("\ ")
+function AddAndWord(wordsArray) {
+    if (!Array.isArray(wordsArray) || wordsArray.length === 0) {
+        console.log('Please input words which will be an array');
+    }
+    if (wordsArray.length === 1) {
+        return wordsArray[0] + " are the examples of legged furred animal";
+    }
+
+    const lastWord = wordsArray[wordsArray.length - 1];
+    const fullSentence = wordsArray.join(", ") + " and " + lastWord + " are 4 legged furred animal";
+    return fullSentence;
+}
+const words = ["cats", "dogs", "cows", "camel"];
+const results = AddAndWord(words);
+console.log(results); // Output: "cats, dogs, cows and camel are 4 legged furred animals"
+console.log("\ ")
+
+/* 3. Write a function to split a string and convert it into an array of words
+*/
+console.log("3. Write a function to split a string and convert it into an array of words")
+console.log("\ ")
+function SplitString(inputString) {
+    const wordsArray = [];
+    let currentWord = '';
+    const space = ' ';
+    for (let i = 0; i < inputString.length; i++) {
+        const char = inputString[i];
+        if (char !== space) {
+        currentWord += char;
+        } else {
+        wordsArray.push(currentWord);
+        currentWord = space;
+        }
+    }
+    wordsArray.push(currentWord);
+    return wordsArray;
+}
+
+const inputString = "Hello World of  Tipu-Tipu";
+const result2 = SplitString(inputString);
+console.log(result2); // Output: [ 'Hello', 'World', 'of', ' ', 'Tipu-Tipu' ]
+console.log("\ ")
+
+/* 4. Write a function to calculate each element in the same position from two arrays of integer.
+*/
+console.log("4. Write a function to calculate each element in the same position from two arrays of integer.")
+console.log("\ ")
+function calculateSumOfArrays(arr2, arr3) {
+    if (!Array.isArray(arr2) || !Array.isArray(arr3) || arr2.length !== arr3.length) {
+    console.log('Input arrays must be of the same length.');
+    }
+    const resultArray = [];
+    for (let i = 0; i < arr2.length; i++) {
+    const sum = arr2[i] + arr3[i];
+    resultArray.push(sum);
+        }
+
+        return resultArray;
+}
+const arr2 = [1, 5, 3];
+const arr3 = [3, 1, 1];
+const result3 = calculateSumOfArrays(arr2, arr3);
+console.log(result3); // Expected Output: [4, 6, 4]
+console.log("\ ")
+
+/* 5. Write a function that adds an element to the end of an array. However, the element should only be added if it is not already in the array.
+*/
+console.log("5. Write a function that adds an element to the end of an array. However, the element should only be added if it is not already in the array.")
+console.log("\ ")
+
+function addElementIfNotExists(arr4, element) {
+    if (!Array.isArray(arr4)) {
+    console.log('The first argument must be an array.');
+    }
+    if (!arr4.includes(element)) {
+    arr4.push(element);
+    }
+}
+const Array4 = [1, 2, 3];
+addElementIfNotExists(Array4, 7);
+console.log(Array4); // Expected Output: [1, 2, 3, 7]
+
+/*
+addElementIfNotExists(myArray, 2); // The element 2 is already in the array, so it won't be added.
+console.log(myArray); // Output: [1, 2, 3, 7]
+*/
+console.log("\ ")
+
+/* 6. Write a function to remove all odd numbers in an array and return a new array that contains even numbers only
+*/
+console.log("6. Write a function to remove all odd numbers in an array and return a new array that contains even numbers only")
+console.log("\ ")
+
+function CutOddNumbers(arr5) {
+    if (!Array.isArray(arr5)) {
+        console.log('Input must be an array.');
+    }
+    const evenNumbArray = [];
+    for (let i = 0; i < arr5.length; i++) {
+        const num = arr5[i];
+        if (num % 2 === 0) {
+            evenNumbArray.push(num);
+        }
+    }
+    return evenNumbArray;
+}
+const myArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16];
+const resultArray = CutOddNumbers(myArray);
+console.log(resultArray); // Expected Output: [2, 4, 6, 8, 10, 12, 14, 16]
+console.log("\ ")
