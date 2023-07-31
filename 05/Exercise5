@@ -67,19 +67,18 @@ console.log("2. Write a function that takes an array of words and returns a stri
 console.log("\ ")
 function AddAndWord(wordsArray) {
     if (!Array.isArray(wordsArray) || wordsArray.length === 0) {
-        console.log('Please input words which will be an array');
+    console.log('Please input words which will be an array');
     }
     if (wordsArray.length === 1) {
-        return wordsArray[0] + " are the examples of legged furred animal";
+    return wordsArray[0] + " is an example of a legged furred animal";
     }
-
     const lastWord = wordsArray[wordsArray.length - 1];
-    const fullSentence = wordsArray.join(", ") + " and " + lastWord + " are 4 legged furred animal";
+    const fullSentence = wordsArray.slice(0, -1).join(", ") + " and " + lastWord + " are 4 legged furred animals";
     return fullSentence;
 }
-const words = ["cats", "dogs", "cows", "camel"];
+const words = ["cats", "dogs", "cows", "camels"];
 const results = AddAndWord(words);
-console.log(results); // Output: "cats, dogs, cows and camel are 4 legged furred animals"
+console.log(results);// Output: "cats, dogs, cows and camel are 4 legged furred animals"
 console.log("\ ")
 
 /* 3. Write a function to split a string and convert it into an array of words
