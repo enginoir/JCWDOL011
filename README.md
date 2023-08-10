@@ -2,14 +2,16 @@
 
 Welcome to the JCWDOL011 repository! This repository contains various coding exercises and projects for the JCWDOL011 course.
 
-## Table of Contents
-
-- [Module1](Module01) - Fundamental => Web Developer
-- [Exercises](#exercises)
-
 ## Introduction
 
 This repository is dedicated to exercises and projects completed as part of the JCWDOL011 course. It includes a variety of coding challenges, examples, and projects that cover different programming concepts and techniques.
+
+## Table of Contents
+
+- [Module1](Module01) - Fundamental => Web Developer
+- [Module2](Module01) - Front-End
+- [Module3](Module01) - Back-End
+- [Exercises](#exercises)
 
 ## Exercises
 
