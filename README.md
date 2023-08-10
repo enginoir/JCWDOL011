@@ -4,7 +4,7 @@ Welcome to the JCWDOL011 repository! This repository contains various coding exe
 
 ## Table of Contents
 
-- [Module1](#Module01)
+- [Module1](Module01)
 - [Exercises](#exercises)
 
 ## Introduction
