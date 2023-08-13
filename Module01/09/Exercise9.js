@@ -53,9 +53,6 @@ console.log(`Part-time employee salary for ${partTimeHours} Hrs: IDR ${partTimeE
 console.log('');
 
 
-
-
-
 console.log('2. Create a shooting game between two players');
 console.log('');
 class Player {
