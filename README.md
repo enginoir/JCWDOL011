@@ -1,4 +1,4 @@
-# JCWDOL011 Repository
+# JCWDOL011-Web Dev. Class Repository
 
 Welcome to the JCWDOL011 repository! This repository contains various coding exercises and projects for the JCWDOL011 course.
 
@@ -8,7 +8,7 @@ This repository is dedicated to exercises and projects completed as part of the 
 
 ## Table of Contents
 
-- [Module1](Module01) - Fundamental => Web Developer
+- [Module1](Module01) - Fundamental
 - [Module2](Module01) - Front-End
 - [Module3](Module01) - Back-End
 - [Exercises](#exercises)
