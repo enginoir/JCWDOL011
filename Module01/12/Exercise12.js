@@ -1,3 +1,14 @@
+console.log('1. Create a function to convert Excel sheet column title to its corresponding column number.')
+console.log("\ ")
+
+function excel(alphabet) {
+    const alphabets = "A-Z"
+}
+
+
+console.log("\ ")
+
+
 console.log('2. Create a function that can find the different single number among other duplicated numbers')
 console.log("\ ")
 
@@ -5,7 +16,7 @@ function findSingleNumber(nums) {
     let result = 0;
     for (let i = 0; i < nums.length; i++) {
         const num = nums[i];
-        result = result ^ num;
+        result ^= num;
     }
     return result;
 }
