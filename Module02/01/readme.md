@@ -4,9 +4,9 @@ This directory (`01`) contains a collection of HTML files related to Module 02 o
 
 ## Files
 
-1. [File 01.html](./File%2001.html)
-2. [File 02.html](./File%2002.html)
-3. [File 03.html](./File%2003.html)
+1. [Exercisea-a.html](https://github.com/enginoir/JCWDOL011/blob/main/Module02/01/exercise-a.html)
+2. [Exercise-b.html](https://github.com/enginoir/JCWDOL011/blob/main/Module02/01/exercise-b.html)
+3. [Index.html for in-class discussion](https://github.com/enginoir/JCWDOL011/blob/main/Module02/01/index.html)
 
 
 Feel free to explore these HTML files to learn more about the content covered in Module 02.
